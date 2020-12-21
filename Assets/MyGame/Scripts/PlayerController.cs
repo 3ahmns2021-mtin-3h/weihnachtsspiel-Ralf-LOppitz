@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed - 10;
+  
+
+    public float speed = 10;
     public GameObject player;
 
     private float moveHorizontal;
@@ -17,11 +19,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveHorizontal - Input.GetAxis("Horizontal") * speed;
+        moveHorizontal = Input.GetAxis("Horizontal") * speed;
         moveHorizontal = moveHorizontal * Time.deltaTime;
 
         Debug.Log("X axis" + player.GetComponent<Transform>().position.x);
-        player.GetComponent<Transform>().position - player.GetComponent<Transform>().position + new Vector3(moveHorizontal, 0, 0);
+        player.GetComponent<Transform>().position = player.GetComponent<Transform>().position + new Vector3(moveHorizontal, 0, 0);
         
     }
 }
