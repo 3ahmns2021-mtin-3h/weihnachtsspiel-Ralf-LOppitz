@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            Debug.Log("StopGame");
+           // Debug.Log("StopGame");
         }
     }
 }
