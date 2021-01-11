@@ -10,13 +10,11 @@ public class PlayerController : MonoBehaviour
     public GameObject player;
 
     private float moveHorizontal;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         moveHorizontal = Input.GetAxis("Horizontal") * speed;
